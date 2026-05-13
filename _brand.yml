@@ -7,10 +7,10 @@ meta:
   header:
     region:
       text: Region
-      href: null
+      href: "#"
     title:
       text: Site Title
-      href: null
+      href: "#"
     logo: undp
   footer:
     logo: undp
