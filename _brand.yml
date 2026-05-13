@@ -1,6 +1,19 @@
 # This file is an abridged version of undp-brand-yml with only parts relevant
 # to the PyShiny Starter Kit.
 # See https://github.com/UNDP-Data/undp-brand-yml for details.
+
+# Use the meta section to configure application metadata
+meta:
+  header:
+    region:
+      text: Region
+      href: null
+    title:
+      text: Site Title
+      href: null
+    logo: undp
+  footer:
+    logo: undp
 color:
   palette:
     black: "#000000"
