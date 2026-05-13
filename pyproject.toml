@@ -1,0 +1,19 @@
+[project]
+name = "py-shiny-starter-kit"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "shiny[theme] == 1.6.1",
+    "shinywidgets == 0.8.1",
+    "pandas[parquet] ~= 3.0.2",
+    "plotly[express] ~= 6.7.0",
+    "undp-brand-yml[plotting] @ git+https://github.com/undp-data/undp-brand-yml.git@0.2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pylint ~= 4.0.5",
+    "isort ~= 8.0.1",
+    "black ~= 26.3.1",
+    "pytest ~= 9.0.3",
+]
