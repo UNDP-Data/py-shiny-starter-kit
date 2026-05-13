@@ -6,11 +6,11 @@ from pathlib import Path
 
 from shiny import App, reactive, ui
 
-from src import components, link_undp_css
+from src import components, link_undp_css, link_undp_js
 
 theme = ui.Theme.from_brand(__file__)
 app_ui = ui.page_fluid(
-    ui.head_content(*link_undp_css()),
+    ui.head_content(*link_undp_css(), *link_undp_js()),
     components.header(
         **theme.brand.meta.header,
         navs=[

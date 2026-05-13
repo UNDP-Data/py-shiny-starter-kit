@@ -5,7 +5,7 @@ Miscellaneous utility functions.
 from jinja2 import Template
 from shiny import ui
 
-__all__ = ["include_html", "link_undp_css"]
+__all__ = ["include_html", "link_undp_css", "link_undp_js"]
 
 
 CDN_URL = "https://cdn.jsdelivr.net/npm/@undp/design-system-assets"
@@ -50,6 +50,25 @@ def link_undp_css() -> list[ui.Tag]:
             "base-minimal.min.css",
             "components/country-site-header.min.css",
             "components/menu.min.css",
+            "components/mobile-nav.min.css",
             "components/footer.min.css",
         )
+    ]
+
+
+def link_undp_js() -> list[ui.Tag]:
+    """
+    Link the official JS scripts from the UNDP Design System.
+
+    See https://design.undp.org/?path=/docs/getting-started-how-to-use-our-design-system--docs
+    for detailed information on the design system.
+
+    Returns
+    -------
+    list[ui.Tag]
+        Script tags to be inserted into the page head.
+    """
+    return [
+        ui.tags.script(src=f"{CDN_URL}/js/{href}")
+        for href in ("init.js", "navigation.min.js")
     ]

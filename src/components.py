@@ -75,5 +75,10 @@ def footer(logo: Literal["undp", "pnud"] = "undp") -> ui.HTML:
     ----------
     logo : {'undp', 'pnud'}, default='undp'
         Type of the official logo to use.
+
+    Returns
+    -------
+    ui.HTML
+        Custom HTML component for UNDP footer.
     """
     return include_html("www/html/footer.html", logo=f"images/{logo}-logo-white.svg")

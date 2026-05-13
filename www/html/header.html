@@ -1,4 +1,4 @@
-<header class="country-header">
+<header class="country-header" data-undpds-component="navigation">
     <section class="header">
         <div class="grid-container fluid">
             <div class="grid-x grid-margin-x align-content-middle">
@@ -23,6 +23,33 @@
                             {% endfor %}
                         </ul>
                     </nav>
+                </div>
+                <div class="cell small-3 large-auto top-right">
+                    <button class="menu-hamburger" aria-label="menu-icon">
+                        <span class="hamburger-line line-top"></span>
+                        <span class="hamburger-line line-middle"></span>
+                        <span class="hamburger-line line-bottom"></span>
+                        Nav toggle
+                    </button>
+                </div>
+                <div class="mobile-nav">
+                    <div class="grid-x">
+                        <div class="cell mobile-links">
+                            <ul>
+                                {% for nav in navs %}
+                                <li>
+                                    <a href="#" id="headerlink{{ loop.index }}" onclick="
+                                        Shiny.setInputValue('page_switch', '{{ nav.value }}', {priority: 'event'});
+                                        // close the menu
+                                        document.querySelector('.menu-hamburger').click();
+                                        ">
+                                        {{ nav.text }}
+                                    </a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
