@@ -11,6 +11,19 @@
                         <span><a href="{{ title.href }}" title="UNDP homepage link">{{ title.text }}</a></span>
                     </div>
                 </div>
+                <div class="cell small-1 large-auto align-content-middle top-center">
+                    <nav class="menu">
+                        <ul class="">
+                            {% for nav in navs %}
+                            <li data-menu-id="headerlink{{ loop.index }}">
+                                <a href="#"
+                                    onclick="Shiny.setInputValue('page_switch', '{{ nav.value }}', {priority: 'event'});"
+                                    tabindex="0">{{ nav.text }}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </div>
     </section>

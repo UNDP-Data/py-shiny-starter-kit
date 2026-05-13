@@ -20,8 +20,20 @@ class Anchor(TypedDict):
     href: NotRequired[str]
 
 
+class Nav(TypedDict):
+    """
+    Nav tag details.
+    """
+
+    text: str
+    value: str
+
+
 def header(
-    region: str | Anchor, title: str | Anchor, logo: Literal["undp", "pnud"] = "undp"
+    region: str | Anchor,
+    title: str | Anchor,
+    logo: Literal["undp", "pnud"] = "undp",
+    navs: list[Nav] | None = None,
 ) -> ui.HTML:
     """
     Add an HTML component for UNDP country header.
@@ -36,12 +48,20 @@ def header(
         Website title details displated below the region name.
     logo : {'undp', 'pnud'}, default='undp'
         Type of the official logo to use.
+    navs : list[Nav], optional
+        Navigation elements. The value must match that of a `ui.nav_panel`.
+
+    Returns
+    -------
+    ui.HTML
+        Custom HTML component for UNDP country header.
     """
     return include_html(
         "www/html/header.html",
         region=region if isinstance(region, dict) else {"text": region},
         title=title if isinstance(title, dict) else {"text": title},
         logo=f"images/{logo}-logo-blue.svg",
+        navs=navs,
     )
 
 

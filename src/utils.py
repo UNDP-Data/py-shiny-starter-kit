@@ -49,6 +49,7 @@ def link_undp_css() -> list[ui.Tag]:
         for href in (
             "base-minimal.min.css",
             "components/country-site-header.min.css",
+            "components/menu.min.css",
             "components/footer.min.css",
         )
     ]
