@@ -1,0 +1,255 @@
+# This file is based on the information from
+# - UNDP Brand Portal (https://brand.undp.org)
+# - UNDP Design System (https://design.undp.org)
+# - UNDP Website (https://undp.org)
+meta:
+  name:
+    full: United Nations Development Programme
+    short: UNDP
+  link:
+    home: https://www.undp.org
+    github: https://github.com/undp
+    twitter: https://x.com/undp
+    linkedin: https://www.linkedin.com/company/undp
+    facebook: https://www.facebook.com/undp
+    threads: https://www.threads.com/@undp
+    instagram: https://www.instagram.com/undp
+    youtube: https://www.youtube.com/undp
+  description: |
+    UNDP is the leading United Nations organization fighting to end the
+    injustice of poverty, inequality, and climate change. Working with
+    our broad network of experts and partners in 170 countries, we help
+    nations to build integrated, lasting solutions for people and planet.
+    
+    Learn more at undp.org or follow at @UNDP.
+logo:
+  images:
+    favicon: https://www.undp.org/themes/custom/undpglobal/favicon.ico
+    undp-blue:
+      path: https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.5.1/images/undp-logo-blue.svg
+      alt: "The blue logo of the United Nations Development Programme (UNDP)"
+    undp-white:
+      path: https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.5.1/images/undp-logo-white.svg
+      alt: "The white logo of the United Nations Development Programme (UNDP)"
+    pnud-blue:
+      path: https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.5.1/images/pnud-logo-blue.svg
+      alt: "The blue logo of the United Nations Development Programme (PNUD)"
+    pnud-white:
+      path: https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.5.1/images/pnud-logo-white.svg
+      alt: "The white logo of the United Nations Development Programme (PNUD)"
+  small:
+    light: undp-blue
+    dark: undp-white
+  medium:
+    light: undp-blue
+    dark: undp-white
+  large:
+    light: undp-blue
+    dark: undp-white
+color:
+  palette:
+    black: "#000000"
+    white: "#FFFFFF"
+    # https://design.undp.org/?path=/docs/foundation-colors--docs
+    # primary colours
+    blue-100: "#B5D5F5"
+    blue-200: "#94C4F5"
+    blue-300: "#6BABEB"
+    blue-400: "#4F95DD"
+    blue-500: "#3288CE"
+    blue-600: "#0468B1" # UNDP Blue
+    blue-700: "#1F5A95"
+    gray-100: "#FAFAFA"
+    gray-200: "#F7F7F7"
+    gray-300: "#EDEFF0"
+    gray-400: "#D4D6D8"
+    gray-500: "#A9B1B7"
+    gray-600: "#55606E"
+    gray-700: "#232E3D"
+    # accent colours
+    light-yellow: "#FFEB00"
+    yellow: "#FFEB00"
+    dark-yellow: "#FBC412"
+    light-red: "#FFBCB7"
+    red: "#EE402D"
+    dark-red: "#D12800"
+    light-green: "#B8ECB6"
+    green: "#6DE354"
+    dark-green: "#59BA47"
+    light-azure: "#A2DAF3"
+    azure: "#60D4F2"
+    dark-azure: "#00C1FF"
+    # extra colours from https://cdn.jsdelivr.net/npm/@undp/design-system/docs/css/base-minimal.min.css
+    light-pink: "#FFB4AE"
+    silvery-moonlight: "#CED0D3"
+    shuttle-gray: "#55606F"
+    ebony-clay: "#232E3E"
+    # SDG colours from https://www.un.org/sustainabledevelopment/news/communications-material/
+    sdg-1: "#E5243B"
+    sdg-2: "#DDA63A"
+    sdg-3: "#4C9F38"
+    sdg-4: "#C5192D"
+    sdg-5: "#FF3A21"
+    sdg-6: "#26BDE2"
+    sdg-7: "#FCC30B"
+    sdg-8: "#A21942"
+    sdg-9: "#FD6925"
+    sdg-10: "#DD1367"
+    sdg-11: "#FD9D24"
+    sdg-12: "#BF8B2E"
+    sdg-13: "#3F7E44"
+    sdg-14: "#0A97D9"
+    sdg-15: "#56C02B"
+    sdg-16: "#00689D"
+    sdg-17: "#19486A"
+  foreground: black
+  background: white
+  primary: blue-600
+  secondary: gray-200
+  tertiary: dark-red
+  success: light-green
+  info: light-azure
+  warning: light-red
+  danger: red
+  light: white
+  dark: gray-700
+typography:
+  fonts:
+    # from https://www.npmjs.com/package/@undp/design-system-assets
+    - family: Proxima Nova
+      source: file
+      files:
+        - path: https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.5.1/fonts/proximanova-thin-webfont.woff2
+          weight: 100
+          style: normal
+        - path: https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.5.1/fonts/proximanova-thinit-webfont.woff2
+          weight: 100
+          style: italic
+        - path: https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.5.1/fonts/proximanova-light-webfont.woff2
+          weight: 300
+          style: normal
+        - path: https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.5.1/fonts/proximanova-lightit-webfont.woff2
+          weight: 300
+          style: italic
+        - path: https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.5.1/fonts/proximanova-regular-webfont.woff2
+          weight: 400
+          style: normal
+        - path: https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.5.1/fonts/proximanova-regularit-webfont.woff2
+          weight: 400
+          style: italic
+        - path: https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.5.1/fonts/proximanova-medium-webfont.woff2
+          weight: 500
+          style: normal
+        - path: https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.5.1/fonts/proximanova-mediumit-webfont.woff2
+          weight: 500
+          style: italic
+        - path: https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.5.1/fonts/proximanova-semibold-webfont.woff2
+          weight: 600
+          style: normal
+        - path: https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.5.1/fonts/proximanova-semiboldit-webfont.woff2
+          weight: 600
+          style: italic
+        - path: https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.5.1/fonts/proximanova-bold-webfont.woff2
+          weight: 700
+          style: normal
+        - path: https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.5.1/fonts/proximanova-boldit-webfont.woff2
+          weight: 700
+          style: italic
+        - path: https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.5.1/fonts/proximanova-extrabold-webfont.woff2
+          weight: 800
+          style: normal
+        - path: https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.5.1/fonts/proximanova-extraboldit-webfont.woff2
+          weight: 800
+          style: italic
+        - path: https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.5.1/fonts/proximanova-black-webfont.woff2
+          weight: 900
+          style: normal
+        - path: https://cdn.jsdelivr.net/npm/@undp/design-system-assets@1.5.1/fonts/proximanova-blackit-webfont.woff2
+          weight: 900
+          style: italic
+    - family: Noto Sans
+      source: bunny
+    - family: Noto Sans Mono
+      source: bunny
+  base:
+    family: Proxima Nova
+    size: 1rem
+    line-height: 1.4
+    weight: 400
+  headings:
+    family: Proxima Nova
+    weight: 700
+    line-height: 1.15
+    color: black
+  monospace:
+    family: Noto Sans Mono
+    size: 1rem
+  monospace-inline:
+    color: black
+    background-color: gray-200
+  monospace-block:
+    line-height: 1.4
+    color: black
+    background-color: gray-200
+  link:
+    color: dark-red
+    background-color: gray-200
+    decoration: underline
+defaults:
+  # from https://dataviz.design.undp.org/?path=/story/utilities-colors-data-viz-light-theme--datavizlightmode
+  categorical:
+    - "#0468B1"
+    - "#5DD4F0"
+    - "#02A38A"
+    - "#E78625"
+    - "#E0529E"
+    - "#757AF0"
+    - "#A0C236"
+    - "#FBC412"
+    - "#BF8B2E"
+    - "#A9B1B7"
+  sequential_neutral:
+    - "#FFF4AC"
+    - "#C8E7A8"
+    - "#8CD8A4"
+    - "#47C79F"
+    - "#00B29C"
+    - "#0099A5"
+    - "#007FAF"
+    - "#0067AD"
+    - "#005396"
+    - "#003F80"
+  sequential_negative:
+    - "#FFF4AC"
+    - "#FBD68A"
+    - "#F6B666"
+    - "#F29641"
+    - "#E7752D"
+    - "#DB521A"
+    - "#C92B06"
+    - "#A71C04"
+    - "#850E02"
+    - "#650000"
+  sequential_positive:
+    - "#FFF4AC"
+    - "#DDE797"
+    - "#BADA81"
+    - "#96CD6B"
+    - "#78BE5E"
+    - "#60AD5B"
+    - "#489D59"
+    - "#308C56"
+    - "#187B54"
+    - "#006A51"
+  diverging:
+    - "#AA1D09"
+    - "#D9382D"
+    - "#E47559"
+    - "#EEA57D"
+    - "#F6D39E"
+    - "#FFFFBF"
+    - "#BAE0E1"
+    - "#89BFDC"
+    - "#5F9DCC"
+    - "#347CBC"
+    - "#095AAB"
