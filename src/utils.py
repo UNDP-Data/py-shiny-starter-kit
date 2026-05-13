@@ -2,6 +2,7 @@
 Miscellaneous utility functions.
 """
 
+from jinja2 import Template
 from shiny import ui
 
 __all__ = ["include_html", "link_undp_css"]
@@ -10,7 +11,7 @@ __all__ = ["include_html", "link_undp_css"]
 CDN_URL = "https://cdn.jsdelivr.net/npm/@undp/design-system-assets"
 
 
-def include_html(file_path: str) -> ui.HTML:
+def include_html(file_path: str, **kwargs) -> ui.HTML:
     """
     Include HTML from a file.
 
@@ -18,6 +19,8 @@ def include_html(file_path: str) -> ui.HTML:
     ----------
     file_path : str
         Path to an HTML file.
+    **kwargs
+        Extra variables to pass to the Jinja2 template for rendering.
 
     Returns
     -------
@@ -25,7 +28,8 @@ def include_html(file_path: str) -> ui.HTML:
         Contents from the file as an ui.HTML tag.
     """
     with open(file_path, "r", encoding="utf-8") as file:
-        return ui.HTML(file.read())
+        template = Template(file.read()).render(**kwargs)
+    return ui.HTML(template)
 
 
 def link_undp_css() -> list[ui.Tag]:
