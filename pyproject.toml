@@ -5,6 +5,7 @@ requires-python = ">=3.13"
 dependencies = [
     "shiny[theme] == 1.6.1",
     "shinywidgets == 0.8.1",
+    "jinja2 ~= 3.1.6",
     "pandas[parquet] ~= 3.0.2",
     "plotly[express] ~= 6.7.0",
     "undp-brand-yml[plotting] @ git+https://github.com/undp-data/undp-brand-yml.git@0.2.0",
