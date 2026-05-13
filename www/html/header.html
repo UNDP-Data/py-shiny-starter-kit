@@ -3,12 +3,12 @@
         <div class="grid-container fluid">
             <div class="grid-x grid-margin-x align-content-middle">
                 <div class="cell small-8 large-2 shrink align-self-middle top-left">
-                    <a href="#" class="logo" tabindex="0" title="UNDP Logo homepage link">
-                        <img alt="UNDP Logo" src="images/undp-logo-blue.svg" />
+                    <a href="https://www.undp.org" class="logo" tabindex="0" title="UNDP Logo homepage link">
+                        <img alt="UNDP Logo" src="{{ logo }}" />
                     </a>
                     <div class="site-title">
-                        <span><a href="#" title="UNDP homepage link">REGION</a></span>
-                        <span><a href="#" title="UNDP homepage link">Site Title</a></span>
+                        <span><a href="{{ region.href }}" title="UNDP homepage link">{{ region.text }}</a></span>
+                        <span><a href="{{ title.href }}" title="UNDP homepage link">{{ title.text }}</a></span>
                     </div>
                 </div>
             </div>

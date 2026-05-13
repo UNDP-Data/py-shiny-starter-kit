@@ -2,6 +2,7 @@
 Application source code.
 """
 
+from . import components
 from .utils import include_html, link_undp_css
 
-__all__ = ["include_html", "link_undp_css"]
+__all__ = ["components", "include_html", "link_undp_css"]

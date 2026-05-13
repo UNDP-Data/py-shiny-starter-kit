@@ -6,16 +6,16 @@ from pathlib import Path
 
 from shiny import App, render, ui
 
-from src import include_html, link_undp_css
+from src import components, link_undp_css
 
 app_ui = ui.page_fluid(
     ui.head_content(*link_undp_css()),
-    include_html("www/html/header.html"),
+    components.header(region="Region", title={"text": "Site Title", "href": "/"}),
     ui.br(),
     ui.panel_title("Hello Shiny!"),
     ui.input_slider("n", "N", 0, 100, 20),
     ui.output_text_verbatim("txt"),
-    include_html("www/html/footer.html"),
+    components.footer(),
 )
 
 
