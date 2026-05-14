@@ -81,3 +81,7 @@ color:
   danger: red
   light: white
   dark: gray-700
+defaults:
+  bootstrap:
+    defaults:
+      grid-gutter-width: "0rem"
