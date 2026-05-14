@@ -52,10 +52,10 @@ def get_ui():
         ),
         ui.h3("Example Module"),
         ui.h6("Scatter plot of Iris dataset"),
-        output_widget("plot", height="50%", fillable=True),
+        output_widget("plot", height="40%", fillable=True),
         ui.h6("Data grid of Iris dataset"),
         ui.output_data_frame("table"),
-        height="70vh",
+        height="90vh",
     )
 
 
@@ -116,4 +116,4 @@ def get_server(input, output, session):
         Table display function.
         """
         df = data().rename(unsnake, axis=1)
-        return render.DataGrid(df, width="100%", height="300px")
+        return render.DataGrid(df, width="100%", height="100%")
