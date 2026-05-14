@@ -61,7 +61,7 @@ def header(
         region=region if isinstance(region, dict) else {"text": region},
         title=title if isinstance(title, dict) else {"text": title},
         logo=f"images/{logo}-logo-blue.svg",
-        navs=navs,
+        navs=navs or [],
     )
 
 
