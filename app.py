@@ -5,9 +5,11 @@ Application entry point.
 from pathlib import Path
 
 from shiny import App, reactive, ui
+from undp_brand_yml.plotting import set_plotly_theme
 
 from src import components, link_undp_css, link_undp_js, modules
 
+set_plotly_theme()
 theme = ui.Theme.from_brand(__file__)
 app_ui = ui.page_fluid(
     ui.head_content(*link_undp_css(), *link_undp_js()),
