@@ -85,3 +85,11 @@ defaults:
   bootstrap:
     defaults:
       grid-gutter-width: "0rem"
+  shiny:
+    theme:
+      rules: |
+        // Style the DataGrid header
+        shiny-data-frame th {
+            color: $brand-white;
+            background-color: $brand-blue-600 !important;
+        }
