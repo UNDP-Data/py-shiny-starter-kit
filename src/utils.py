@@ -5,7 +5,13 @@ Miscellaneous utility functions.
 from jinja2 import Template
 from shiny import ui
 
-__all__ = ["include_html", "link_undp_css", "link_undp_js", "unsnake"]
+__all__ = [
+    "include_html",
+    "include_markdown",
+    "link_undp_css",
+    "link_undp_js",
+    "unsnake",
+]
 
 
 CDN_URL = "https://cdn.jsdelivr.net/npm/@undp/design-system-assets"
@@ -30,6 +36,24 @@ def include_html(file_path: str, **kwargs) -> ui.HTML:
     with open(file_path, "r", encoding="utf-8") as file:
         template = Template(file.read()).render(**kwargs)
     return ui.HTML(template)
+
+
+def include_markdown(file_path: str) -> ui.HTML:
+    """
+    Include Markdown from a file.
+
+    Parameters
+    ----------
+    file_path : str
+        Path to a Markdown file file.
+
+    Returns
+    -------
+    ui.HTML
+        Contents from the Markdown file as an ui.HTML tag.
+    """
+    with open(file_path, "r", encoding="utf-8") as file:
+        return ui.markdown(file.read())
 
 
 def link_undp_css() -> list[ui.Tag]:
