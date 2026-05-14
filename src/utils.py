@@ -5,7 +5,7 @@ Miscellaneous utility functions.
 from jinja2 import Template
 from shiny import ui
 
-__all__ = ["include_html", "link_undp_css", "link_undp_js"]
+__all__ = ["include_html", "link_undp_css", "link_undp_js", "unsnake"]
 
 
 CDN_URL = "https://cdn.jsdelivr.net/npm/@undp/design-system-assets"
@@ -72,3 +72,10 @@ def link_undp_js() -> list[ui.Tag]:
         ui.tags.script(src=f"{CDN_URL}/js/{href}")
         for href in ("init.js", "navigation.min.js")
     ]
+
+
+def unsnake(text: str) -> str:
+    """
+    Utility function to turn snake case into a title case text.
+    """
+    return text.replace("_", " ").title()
