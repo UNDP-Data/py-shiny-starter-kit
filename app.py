@@ -6,20 +6,14 @@ from pathlib import Path
 
 from shiny import App, reactive, ui
 from undp_brand_yml.plotting import set_plotly_theme
+from undp_design_system import footer, header, render_footer, render_header
 
-from src import components, link_undp_css, link_undp_js, modules, include_markdown
+from src import modules, include_markdown
 
 set_plotly_theme()
 theme = ui.Theme.from_brand(__file__)
 app_ui = ui.page_fluid(
-    ui.head_content(*link_undp_css(), *link_undp_js()),
-    components.header(
-        **theme.brand.meta.header,
-        navs=[
-            {"text": "Example Module", "value": "page1"},
-            {"text": "About", "value": "page2"},
-        ],
-    ),
+    header("header"),
     ui.navset_hidden(
         ui.nav_panel(None, modules.example.get_ui("page1"), value="page1"),
         ui.nav_panel(
@@ -32,7 +26,7 @@ app_ui = ui.page_fluid(
         ),
         id="pages",
     ),
-    components.footer(**theme.brand.meta.footer),
+    footer("footer"),
     theme=theme,
 )
 
@@ -46,6 +40,20 @@ def server(input, output, session):
         Reactive function to switch pages from the header.
         """
         ui.update_navset("pages", selected=input.page_switch())
+
+    @render_header()
+    def header():
+        """
+        Function to render the header. You can use it to customise the header based on app inputs if necessary.
+        """
+        return theme.brand.meta.header
+
+    @render_footer
+    def footer():
+        """
+        Function to render the footer.
+        """
+        return theme.brand.meta.footer
 
     modules.example.get_server("page1")
 
