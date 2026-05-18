@@ -18,10 +18,7 @@ app_ui = ui.page_fluid(
         ui.nav_panel(None, modules.example.get_ui("page1"), value="page1"),
         ui.nav_panel(
             None,
-            ui.div(
-                include_markdown("www/mk/about.md"),
-                class_="p-5 vh-100",
-            ),
+            ui.div(include_markdown("www/about.md"), class_="p-5 vh-100"),
             value="page2",
         ),
         id="pages",
