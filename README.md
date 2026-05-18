@@ -130,12 +130,13 @@ and remove `switch_page` callback altogether.
 
 ## Features
 
-This template aims to provide the starter codebase for building Shiny for Python applications compliant with the UNDP Design System. To this end, it links official CSS and JS assets and provides custom components (header and footer) based on the HTML templates from the Design System.
+This template aims to provide the starter codebase for building Shiny for Python applications compliant with the UNDP Design System. It relies on two core packages:
 
-It also provides extra utilities for data applications specifically, including custom theming for `plotly`.
+- [`undp-design-system`](https://github.com/UNDP-Data/py-shiny-components) that implements custom components for Shiny for Python.
+- [`undp-brand-yml`](https://github.com/UNDP-Data/undp-brand-yml) that provides a custom theme and unified branding definitions. It also provides a UNDP theme for `plotly` based on the [UNDP Data Visualisation Library](https://data-viz.data.undp.org).
 
-> [!NOTE]  
-> The theme is provided by [undp-brand-yml](https://github.com/UNDP-Data/undp-brand-yml) package. If you rely on a data visualisation package other than `plotly`, you can use the `undp-brand-yml` package to create a custom theme. Visit the package's repository for more details.
+> [!TIP]  
+> If you utilise a data visualisation package other than `plotly`, you can use the `undp-brand-yml` package to create a custom theme. Visit the package's repository for more details.
 
 ## Testing
 
