@@ -48,7 +48,6 @@ Use a terminal (or your IDE) to set up a local Python environment. The template 
 dependencies = [
     "shiny[theme] == 1.6.1",
     "shinywidgets == 0.8.1",
-    "jinja2 ~= 3.1.6",
     "pandas ~= 3.0.2",
 +    "scikit-learn == 1.8.0",
      ...
