@@ -43,7 +43,12 @@ def server(input, output, session):
         """
         Function to render the header. You can use it to customise the header based on app inputs if necessary.
         """
-        return theme.brand.meta.header
+        return theme.brand.meta.header | {
+            "navs": [
+                {"text": "Example", "value": "page1"},
+                {"text": "About", "value": "page2"},
+            ],
+        }
 
     @render_footer
     def footer():
