@@ -19,6 +19,7 @@ Posit, RStudio, and Shiny are trademarks of Posit Software, PBC, all rights rese
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
+- [Testing](#testing)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
@@ -83,11 +84,11 @@ pip install ".[dev]"
 
 Once the dependencies are installed, you can run the application with:
 
-```python
+```sh
 shiny run -r app.py
 ```
 
-which should launch the app at http://127.0.0.1:8000. With the `-r` flag, the application will track changes to the source code (inside `app.py` or `src` folder) and refresh the page whenever  modifications are detected.
+which should launch the app at http://127.0.0.1:8000. With the `-r` flag, the application will track changes to the source code (inside `app.py` or `src` folder) and refresh the page whenever modifications are detected.
 
 **Configuring metadata**
 
